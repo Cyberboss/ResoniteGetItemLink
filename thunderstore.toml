@@ -6,7 +6,6 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "eia485"
 name = "GetItemLink"
-versionNumber = "1.4.9"
 description = "adds buttons to your inventory for copying an item's cloud url/item link to clipboard. allows you to access the record editor on any inventory item" # max 250 characters
 websiteUrl = "http://github.com/EIA485/NeosGetItemLink"
 containsNsfwContent = false
@@ -21,12 +20,12 @@ outdir = "build"
 
 # Copy the compiled DLL to the plugins folder in mod package
 [[build.copy]]
-source = "GetItemLink/bin/Release/net9.0/GetItemLink.dll"
+source = "GetItemLink/bin/Release/net10.0/GetItemLink.dll"
 target = "plugins/"
 
 # Include PDB
 [[build.copy]]
-source = "GetItemLink/bin/Release/net9.0/GetItemLink.pdb"
+source = "GetItemLink/bin/Release/net10.0/GetItemLink.pdb"
 target = "plugins/"
 
 # include LICENSE file in mod package

@@ -1,24 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<Version>1.4.9</Version>
+		<Version>1.4.10</Version>
 		<Authors>eia485</Authors>
 		<Product>$(AssemblyName)</Product>
 		<RepositoryUrl>https://github.com/EIA485/Neos$(Product)</RepositoryUrl>
-		
+
 		<PackageID>net.$(Authors).$(Product)</PackageID>
-		
+
 		<RootNamespace>$(Product)</RootNamespace>
 		<AssemblyVersion>$(Version)</AssemblyVersion>
 		<FileVersion>$(Version)</FileVersion>
 
 		<RestoreAdditionalProjectSources>https://nuget-modding.resonite.net/v3/index.json</RestoreAdditionalProjectSources>
 
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFramework>net10.0</TargetFramework>
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Deterministic>true</Deterministic>
-
+		
+		<ThunderstorePackable>true</ThunderstorePackable>
 		<GamePath>$(ResonitePath)/</GamePath>
 		<GamePath Condition="Exists('C:\Program Files (x86)\Steam\steamapps\common\Resonite\')">C:\Program Files (x86)\Steam\steamapps\common\Resonite\</GamePath>
 		<GamePath Condition="Exists('$(HOME)\.steam\steam\steamapps\common\Resonite\')">$(HOME)/.steam/steam/steamapps/common/Resonite/</GamePath>
@@ -44,7 +45,7 @@
 			<HintPath>$(GamePath)BepInEx\plugins\BepInExResoniteShim.dll</HintPath>
 		</Reference>
 		<Reference Include="FrooxEngine">
-		    <HintPath>$(GamePath)FrooxEngine.dll</HintPath>
+			<HintPath>$(GamePath)FrooxEngine.dll</HintPath>
 		</Reference>
 		<Reference Include="FrooxEngine.Store">
 			<HintPath>$(GamePath)FrooxEngine.Store.dll</HintPath>
